@@ -1,0 +1,10 @@
+---
+- name: Single task test
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Test file creation
+      my_own_module:
+        path: /tmp/single_test.txt
+        content: "Single task test"
+        force: true

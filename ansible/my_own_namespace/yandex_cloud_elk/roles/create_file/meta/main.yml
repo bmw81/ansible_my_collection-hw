@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Your Name
+  description: Role to create files using my_own_module
+  company: your company
+  license: GPL-3.0-or-later
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+  galaxy_tags:
+    - file
+    - create
+    - my_own_module
+dependencies: []

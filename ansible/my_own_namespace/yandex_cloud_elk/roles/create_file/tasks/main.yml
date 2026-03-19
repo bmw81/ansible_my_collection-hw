@@ -1,0 +1,12 @@
+---
+- name: Create file using my_own_module
+  my_own_namespace.yandex_cloud_elk.my_own_module:
+    path: "{{ create_file_path }}"
+    content: "{{ create_file_content }}"
+    force: "{{ create_file_force }}"
+  register: result
+
+- name: Debug module result
+  debug:
+    msg: "File operation result: {{ result.message }}"
+  when: result.changed

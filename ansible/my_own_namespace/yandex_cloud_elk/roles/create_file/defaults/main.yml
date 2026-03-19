@@ -1,0 +1,5 @@
+---
+# Default parameters for my_own_module
+create_file_path: "/tmp/ansible_default_file.txt"
+create_file_content: "Default content from role"
+create_file_force: false

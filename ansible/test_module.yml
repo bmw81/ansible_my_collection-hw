@@ -1,0 +1,33 @@
+---
+- name: Test my_own_module
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Create a new file with content
+      my_own_module:
+        path: /tmp/test_ansible_file.txt
+        content: "Hello from Ansible module!"
+
+    - name: Try to create the same file again (without force)
+      my_own_module:
+        path: /tmp/test_ansible_file.txt
+        content: "This content should not be written"
+
+    - name: Create file with force overwrite
+      my_own_module:
+        path: /tmp/test_ansible_file.txt
+        content: "This content will overwrite the previous one"
+        force: true
+
+    - name: Create file in nested directories
+      my_own_module:
+        path: /tmp/ansible_test/nested/dir/test_file.txt
+        content: "File in nested directories"
+
+    - name: Test check mode (dry run)
+      my_own_module:
+        path: /tmp/ansible_test/check_mode_test.txt
+        content: "This should only show in check mode"
+      check_mode: true
