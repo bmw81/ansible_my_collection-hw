@@ -256,7 +256,7 @@ mkdir ../playbooks
 ```
 [Playbook playbooks/test_role.yml](/ansible/my_own_namespace/playbooks/test_role.yml)
 
-**Шаг 12.** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег 1.0.0 на этот коммит.
+**Шаг 12.*** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег 1.0.0 на этот коммит.
 
 Шаг 13. Создайте .tar.gz этой collection: ansible-galaxy collection build в корневой директории collection.
 
