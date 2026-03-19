@@ -256,17 +256,25 @@ mkdir ../playbooks
 ```
 [Playbook playbooks/test_role.yml](/ansible/my_own_namespace/playbooks/test_role.yml)
 
-**Шаг 12.*** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег 1.0.0 на этот коммит.
+**Шаг 12.** Заполните всю документацию по collection, выложите в свой репозиторий, поставьте тег 1.0.2 на этот коммит.
 
-Шаг 13. Создайте .tar.gz этой collection: ansible-galaxy collection build в корневой директории collection.
+**Шаг 13.** Создайте .tar.gz этой collection: `ansible-galaxy collection build` в корневой директории collection.
+```
+cd yandex_cloud_elk/
+ansible-galaxy-wrapper collection build
+```
+![Collection build](/img/collection_build.png)
 
-Шаг 14. Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
+**Шаг 14.** Создайте ещё одну директорию любого наименования, перенесите туда single task playbook и архив c collection.
 
-Шаг 15. Установите collection из локального архива: ansible-galaxy collection install <archivename>.tar.gz.
+**Шаг 15.** Установите collection из локального архива: ansible-galaxy collection install <archivename>.tar.gz.
 
-Шаг 16. Запустите playbook, убедитесь, что он работает.
+![Install collection from tar](/img/install_from_tar.png)
 
-Шаг 17. В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
+**Шаг 16.** Запустите playbook, убедитесь, что он работает.
+
+
+**Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
 
 
 
